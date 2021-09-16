@@ -4,15 +4,14 @@ import {Button} from '../components/Button/Button';
 import {P} from '../components/P/P';
 import {Tag} from '../components/Tag/Tag';
 import {Rating} from '../components/Rating/Rating';
+import {withLayout} from '../layout/Layout';
 
-
-export default function Home(): JSX.Element {
+function Home(): JSX.Element {
     const [counter, setCounter] = useState<number>(0);
     const [rating, setRating] = useState<number>(4);
 
-    console.log(counter);
     return (
-        <div>
+        <>
             <Htag tag={'h3'}>Test = {counter}</Htag>
             <Button view={'primary'} arrow={'down'} onClick={() => setCounter(x => x + 1)}>Primary</Button>
             <Button view={'ghost'} arrow={'right'}>Primary</Button>
@@ -34,6 +33,8 @@ export default function Home(): JSX.Element {
                 <Tag size={'m'} color={'primary'}>Medium Tag primary</Tag>
             </div>
             <Rating rating={rating} setRating={setRating} isEditable/>
-        </div>
+        </>
     );
 }
+
+export default withLayout(Home);

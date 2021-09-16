@@ -3,6 +3,7 @@ import styles from './Rating.module.css';
 import Star from './star.svg';
 import cn from 'classnames';
 
+
 export interface RatingPropsType extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
     rating: number
     setRating?: (rating: number) => void
