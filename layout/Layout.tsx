@@ -10,16 +10,14 @@ export interface LayoutPropsType {
 }
 
 const Layout: React.FC<LayoutPropsType> = ({children}): JSX.Element => {
-    return <>
-        <Header/>
-        <div>
-            <Aside/>
-            <div>
-                {children}
-            </div>
+    return <div className={styles.wrapper}>
+        <Header className={styles.header}/>
+        <Aside className={styles.aside}/>
+        <div className={styles.body}>
+            {children}
         </div>
-        <Footer/>
-    </>;
+        <Footer className={styles.footer}/>
+    </div>;
 };
 
 

@@ -5,6 +5,7 @@ import {P} from '../components/P/P';
 import {Tag} from '../components/Tag/Tag';
 import {Rating} from '../components/Rating/Rating';
 import {withLayout} from '../layout/Layout';
+import {LearnGrid} from '../LearnGrid/LearnGrid';
 
 function Home(): JSX.Element {
     const [counter, setCounter] = useState<number>(0);
@@ -12,6 +13,7 @@ function Home(): JSX.Element {
 
     return (
         <>
+            {/*<LearnGrid/>*/}
             <Htag tag={'h3'}>Test = {counter}</Htag>
             <Button view={'primary'} arrow={'down'} onClick={() => setCounter(x => x + 1)}>Primary</Button>
             <Button view={'ghost'} arrow={'right'}>Primary</Button>
